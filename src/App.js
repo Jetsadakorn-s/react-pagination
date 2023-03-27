@@ -1,25 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import FoodComponent from './component/food_component';
+import { useState } from 'react';
+import MenuData from './data/MenuData';
 
 function App() {
+  const [foodData ,setFoodData] = useState(MenuData)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Food Card | Pagination</h1>
+      <FoodComponent/>
     </div>
-  );
+    );
 }
 
 export default App;
